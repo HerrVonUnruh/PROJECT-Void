@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 145237479}
   - component: {fileID: 145237478}
   - component: {fileID: 145237482}
-  - component: {fileID: 145237481}
+  - component: {fileID: 145237483}
   m_Layer: 0
   m_Name: "Gr\xFCnStein (2)"
   m_TagString: Trigger
@@ -541,61 +541,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &145237481
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145237476}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.04, y: 1.45}
-    newSize: {x: 5.33, y: 2.27}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.32999998, y: -0.145}
-      - {x: 0.34, y: -0.005}
-      - {x: 0.5, y: 0.005}
-      - {x: 0.52, y: 0.044999998}
-      - {x: 0.52, y: 0.175}
-      - {x: 0.5, y: 0.195}
-      - {x: 0.52, y: 0.24499999}
-      - {x: 0.52, y: 0.445}
-      - {x: 0.47, y: 0.565}
-      - {x: 0.25, y: 0.72499996}
-      - {x: -0.03, y: 0.72499996}
-      - {x: -0.17999999, y: 0.685}
-      - {x: -0.32999998, y: 0.585}
-      - {x: -0.41, y: 0.49499997}
-      - {x: -0.52, y: 0.195}
-      - {x: -0.52, y: -0.145}
-      - {x: -0.51, y: -0.155}
-      - {x: -0.42, y: -0.185}
-      - {x: -0.26999998, y: -0.145}
-      - {x: -0.32999998, y: -0.265}
-      - {x: -0.22, y: -0.48499998}
-      - {x: -0.22, y: -0.555}
-      - {x: -0.26999998, y: -0.60499996}
-      - {x: -0.26999998, y: -0.715}
-      - {x: -0.22, y: -0.72499996}
-      - {x: -0.03, y: -0.72499996}
-      - {x: 0.03, y: -0.685}
-      - {x: 0.099999994, y: -0.655}
-      - {x: 0.29999998, y: -0.36499998}
-  m_UseDelaunayMesh: 0
 --- !u!70 &145237482
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -612,6 +557,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.044604786, y: -0.00000092769545}
   m_Size: {x: 0.59391797, y: 1.45}
   m_Direction: 0
+--- !u!61 &145237483
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145237476}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.035230204, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.04, y: 1.45}
+    newSize: {x: 5.33, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5938387, y: 1.45}
+  m_EdgeRadius: 0
 --- !u!1 &151532668
 GameObject:
   m_ObjectHideFlags: 0
