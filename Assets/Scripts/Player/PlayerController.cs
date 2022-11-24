@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float Geschwindigkeit = 5f; // Erstellt einen ˆffentlichen Float namens "Geschwindigkeit"
-    public float SprungGeschwindigkeit = 8f; // Erstellt ˆffentlichen Float namens "SprungGeschwindigkeit"  
-    public float jumpSpeed = 5f; // Erstellt einen ˆffentlichen Float namens "jumpSpeed"
-    private float Direction = 0f; // erstellt einen privaten Float namens "Direction" auf 0 
+    public float Geschwindigkeit = 5f; // Erstellt einen √∂ffentlichen Float namens "Geschwindigkeit"
+    public float SprungGeschwindigkeit = 8f; // Erstellt √∂ffentlichen Float namens "SprungGeschwindigkeit"
+    public float jumpSpeed = 5f; // Erstellt einen √∂ffentlichen Float namens "jumpSpeed"
+    private float Direction = 0f; // erstellt einen privaten Float namens "Direction" auf 0
     private Rigidbody2D Player; // Bezug zu Rigidbody2D namens Player
-    private bool wasTriggerd;
+
+    private float triggerLength = 2f;
+    private float triggerCounter;
+
 
 
     // Start is called before the first frame update
@@ -25,16 +28,16 @@ public class PlayerController : MonoBehaviour
     {
         Direction = Input.GetAxis("Horizontal"); // schaltet den Unity Bezug der Tasteneingaben zu "Horizontal" Voreinstellung von Unity frei
 
-        if (Direction > 0f) // wenn die Richtung der gedr¸ckten Tasten ( a oder d ) auf der Y Achse ¸ber 0 sind 
+        if (Direction > 0f) // wenn die Richtung der gedr√ºckten Tasten ( a oder d ) auf der Y Achse √ºber 0 sind
         {
             Player.velocity = new Vector2(Direction * Geschwindigkeit, Player.velocity.y);
 
         }
-        else if (Direction < 0f) // wenn die Richtung der gedr¸ckten Tasten(a oder d ) auf der Y Achse unter 0 sind
+        else if (Direction < 0f) // wenn die Richtung der gedr√ºckten Tasten(a oder d ) auf der Y Achse unter 0 sind
         {
             Player.velocity = new Vector2(Direction * Geschwindigkeit, Player.velocity.y);
         }
-        else // "Andernfalls", also wenn gar keine Taste A oder D gedr¸ckt wird, dann bedeutet das, dass auf der X Achse 0 Bewegung stattfindet!
+        else // "Andernfalls", also wenn gar keine Taste A oder D gedr√ºckt wird, dann bedeutet das, dass auf der X Achse 0 Bewegung stattfindet!
         {
             Player.velocity = new Vector2(0, Player.velocity.y);
         }
@@ -42,21 +45,28 @@ public class PlayerController : MonoBehaviour
         {
             Player.velocity = new Vector2(Player.velocity.x, SprungGeschwindigkeit);
         }
+        if (triggerCounter > 0)
+        {
+            triggerCounter -= Time.deltaTime;
+        }
 
-       
+
+
+
+
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
 
-        
-            if(collision.tag == "Trigger" && wasTriggerd != true)
+
+            if(collision.tag == "Trigger" && triggerCounter <= 0)
         {
 
                 transform.Translate(new Vector3(0, jumpSpeed, 0) * Time.deltaTime * jumpSpeed);
-                wasTriggerd = true;
+                triggerCounter = triggerLength;
 
-                //{
+            //{
             //if (collision.tag == "Trigger")
             //{
 
@@ -69,4 +79,3 @@ public class PlayerController : MonoBehaviour
 
 
 }
-
