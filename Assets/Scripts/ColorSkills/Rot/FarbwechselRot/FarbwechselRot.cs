@@ -32,10 +32,10 @@ public class FarbwechselRot : MonoBehaviour
             colorValue++;
 
         if (Input.GetKeyUp(KeyCode.Q))
-        //{
+        {
             
-        //    colorValue = 0;
-        //}
+           colorValue = 0;
+        }
 
         RotRenderer.material.color = colors[Random.Range(0,2)];
     }

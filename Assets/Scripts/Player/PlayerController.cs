@@ -7,9 +7,11 @@ public class PlayerController : MonoBehaviour
 
     public float Geschwindigkeit = 5f; // Erstellt einen öffentlichen Float namens "Geschwindigkeit"
     public float SprungGeschwindigkeit = 8f; // Erstellt öffentlichen Float namens "SprungGeschwindigkeit"  
+    public float jumpSpeed = 5f; // Erstellt einen öffentlichen Float namens "jumpSpeed"
     private float Direction = 0f; // erstellt einen privaten Float namens "Direction" auf 0 
     private Rigidbody2D Player; // Bezug zu Rigidbody2D namens Player
-        
+    private bool wasTriggerd;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +25,12 @@ public class PlayerController : MonoBehaviour
     {
         Direction = Input.GetAxis("Horizontal"); // schaltet den Unity Bezug der Tasteneingaben zu "Horizontal" Voreinstellung von Unity frei
 
-        if(Direction > 0f) // wenn die Richtung der gedrückten Tasten ( a oder d ) auf der Y Achse über 0 sind 
+        if (Direction > 0f) // wenn die Richtung der gedrückten Tasten ( a oder d ) auf der Y Achse über 0 sind 
         {
-            Player.velocity = new Vector2(Direction * Geschwindigkeit, Player.velocity.y); 
+            Player.velocity = new Vector2(Direction * Geschwindigkeit, Player.velocity.y);
 
         }
-        else if(Direction < 0f) // wenn die Richtung der gedrückten Tasten(a oder d ) auf der Y Achse unter 0 sind
+        else if (Direction < 0f) // wenn die Richtung der gedrückten Tasten(a oder d ) auf der Y Achse unter 0 sind
         {
             Player.velocity = new Vector2(Direction * Geschwindigkeit, Player.velocity.y);
         }
@@ -41,5 +43,30 @@ public class PlayerController : MonoBehaviour
             Player.velocity = new Vector2(Player.velocity.x, SprungGeschwindigkeit);
         }
 
+       
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+
+
+        
+            if(collision.tag == "Trigger" && wasTriggerd != true)
+        {
+
+                transform.Translate(new Vector3(0, jumpSpeed, 0) * Time.deltaTime * jumpSpeed);
+                wasTriggerd = true;
+
+                //{
+            //if (collision.tag == "Trigger")
+            //{
+
+            //    transform.Translate(new Vector3(0, jumpSpeed, 0) * Time.deltaTime * jumpSpeed);
+
+            //}
+        }
+        Debug.Log("GameObject2 collided with " + collision.name);
+    }
+
+
 }
+
