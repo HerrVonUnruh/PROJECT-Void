@@ -31,7 +31,7 @@ public class FarbwechselRot : MonoBehaviour
 
             colorValue++;
 
-        if (Input.GetKeyUp(KeyCode.Q))
+        if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             
            colorValue = 0;

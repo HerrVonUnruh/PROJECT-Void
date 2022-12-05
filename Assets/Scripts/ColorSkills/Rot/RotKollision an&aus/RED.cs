@@ -14,7 +14,7 @@ public class RED : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Q))
+        if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             REDSkill.enabled = !REDSkill.enabled;
         }
