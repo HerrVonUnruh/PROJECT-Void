@@ -8,11 +8,12 @@ public class PlayerController : MonoBehaviour
     public float Geschwindigkeit = 8f; // Erstellt einen öffentlichen Float namens "Geschwindigkeit"
     public float SprungGeschwindigkeit = 50f; // Erstellt öffentlichen Float namens "SprungGeschwindigkeit"
     private float Direction = 0f; // erstellt einen privaten Float namens "Direction" auf 0
+    private float DirectionVertical = 0f;
     public float maxSpeed = 150f;
 
     private bool canDash = true;
     private bool isDashing;
-    public float dashingPower = 24f;
+    public float dashingPower = 1f;
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
     public float flipSteigerung = 10f;
@@ -45,6 +46,9 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+
+        // JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!
+        // ______________________________________________________________________________________________________
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             Player.velocity = new Vector2(Player.velocity.x, SprungGeschwindigkeit);
@@ -55,11 +59,17 @@ public class PlayerController : MonoBehaviour
             Player.velocity = new Vector2(Player.velocity.x, Player.velocity.y * 0.5f);
         }
 
+
+
+        dashingPower = 1f * Geschwindigkeit;
+
         Direction = Input.GetAxis("Horizontal"); // schaltet den Unity Bezug der Tasteneingaben zu "Horizontal" Voreinstellung von Unity frei
+        DirectionVertical = Input.GetAxis("Vertical");
 
         Flip(); // HIER IST DIE STEIGERUNG FUER DIE GESCHWINDIGKEIT PRO SEKUNDE!!!!!!
-        if (Geschwindigkeit < maxSpeed)
 
+
+        if (Geschwindigkeit < maxSpeed)
         {
             Geschwindigkeit += flipSteigerung * Time.deltaTime;
         }
@@ -67,8 +77,8 @@ public class PlayerController : MonoBehaviour
         if (Direction > 0f) // wenn die Richtung der gedrückten Tasten ( a oder d ) auf der Y Achse über 0 sind
         {
             Player.velocity = new Vector2(Direction * Geschwindigkeit, Player.velocity.y);
-
         }
+       
         else if (Direction < 0f) // wenn die Richtung der gedrückten Tasten(a oder d ) auf der Y Achse unter 0 sind
         {
             Player.velocity = new Vector2(Direction * Geschwindigkeit, Player.velocity.y);
@@ -79,13 +89,16 @@ public class PlayerController : MonoBehaviour
         }
         if(Direction == 0)
         { Geschwindigkeit = 8f; }
-            
+
+
+        //JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!JUMP!!!
+        //____________________________________________________________________________________
         if (Input.GetButtonDown("Jump"))
         {
-            Player.velocity = new Vector2(Player.velocity.x,16f);
+            Player.velocity = new Vector2(Player.velocity.x, 16f);
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash || canDash && Input.GetKeyDown(KeyCode.Joystick1Button5))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash || canDash && Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
             StartCoroutine(Dash());
 
@@ -162,8 +175,6 @@ public class PlayerController : MonoBehaviour
         Player.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
-
-         
+        canDash = true;    
     }
 }
