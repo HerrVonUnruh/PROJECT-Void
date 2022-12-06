@@ -87,6 +87,11 @@ public class PlayerController : MonoBehaviour
         {
             Player.velocity = new Vector2(0, Player.velocity.y);
         }
+
+
+
+        //HIER FUER YANNICK!!!!!
+        //_______________________________________________
         if(Direction == 0)
         { Geschwindigkeit = 8f; }
 
