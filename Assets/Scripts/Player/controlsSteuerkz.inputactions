@@ -1,0 +1,112 @@
+{
+    "name": "controlsSteuerkz",
+    "maps": [
+        {
+            "name": "Movement",
+            "id": "fe27f6a7-625f-4e36-b874-09b22783e1d9",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "PassThrough",
+                    "id": "0ee65f63-29d0-424e-b9bf-064055523c12",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "63e44113-7b25-4530-b574-570a497c5640",
+                    "path": "2DVector(mode=1)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "down",
+                    "id": "e3d8dac5-ac89-467c-a6c9-0ce5fb14c97a",
+                    "path": "<XInputController>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox controller ",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "715290cc-f46e-4ae8-baa1-30483a0d9a02",
+                    "path": "<XInputController>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox controller ",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "73a590ec-39b5-4130-ac08-0862bbd3ff6d",
+                    "path": "<XInputController>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox controller ",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Jump ",
+            "id": "ef5663f3-e441-4a7b-b297-7404172b2adf",
+            "actions": [
+                {
+                    "name": "Jump ",
+                    "type": "Button",
+                    "id": "e48e69c2-e69d-4b84-89b9-56b00381bef1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "46dabdaa-a756-4cbc-8379-785e9018b098",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump ",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "8ecc3602-f34a-407c-ad32-db32f71468d7",
+                    "path": "<XInputController>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox controller ",
+                    "action": "Jump ",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Xbox controller ",
+            "bindingGroup": "Xbox controller ",
+            "devices": []
+        }
+    ]
+}
