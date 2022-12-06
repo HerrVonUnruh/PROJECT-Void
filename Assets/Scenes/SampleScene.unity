@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 38622800}
   - component: {fileID: 38622802}
   - component: {fileID: 38622801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 72259535}
   - component: {fileID: 72259537}
   - component: {fileID: 72259536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,8 +443,8 @@ GameObject:
   - component: {fileID: 145237478}
   - component: {fileID: 145237482}
   - component: {fileID: 145237483}
-  m_Layer: 0
-  m_Name: "Gr\xFCnStein (2)"
+  m_Layer: 6
+  m_Name: SprungPilz Gruen
   m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -548,7 +548,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145237476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -566,11 +566,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 145237476}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc97b8c8f0f61f9488d9028114b7729c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.035230204, y: 0}
+  m_Offset: {x: 0.03523022, y: -0.28734887}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -581,7 +581,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5938387, y: 1.45}
+  m_Size: {x: 0.5938387, y: 0.8753023}
   m_EdgeRadius: 0
 --- !u!1 &151532668
 GameObject:
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 151532669}
   - component: {fileID: 151532671}
   - component: {fileID: 151532670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 238158024}
   - component: {fileID: 238158028}
   - component: {fileID: 238158029}
+  - component: {fileID: 238158030}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -729,11 +730,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 3
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &238158025
 SpriteRenderer:
@@ -798,7 +799,8 @@ Transform:
   m_LocalPosition: {x: 896.4199, y: 34.83274, z: 0}
   m_LocalScale: {x: 0.8273861, y: 0.8801639, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1534258838}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -827,43 +829,87 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.2765639, y: 1.1138444}
-      - {x: 1.1673377, y: 1.3816233}
-      - {x: 0.92756486, y: 1.513273}
-      - {x: 0.68363714, y: 1.4872994}
-      - {x: 0.094356775, y: 1.2104642}
-      - {x: -0.17447162, y: 1.2176745}
-      - {x: -0.6789832, y: 1.4409716}
-      - {x: -0.9859866, y: 1.3169962}
-      - {x: -1.2293658, y: 0.5946791}
+    - - {x: 1.4033653, y: 0.8916002}
+      - {x: 1.3965118, y: 0.9500206}
+      - {x: 1.4301015, y: 1.3124515}
+      - {x: 1.3177273, y: 1.5597082}
+      - {x: 1.1894362, y: 1.7196776}
+      - {x: 0.98797405, y: 1.7847621}
+      - {x: 0.83527297, y: 1.7092282}
+      - {x: 0.8144289, y: 1.509581}
+      - {x: 1.0901436, y: 1.1881983}
+      - {x: 1.0108423, y: 0.86591214}
+      - {x: 0.86818993, y: 0.79589254}
+      - {x: -0.121136874, y: 0.73624104}
+      - {x: -0.6660667, y: 0.7576252}
+      - {x: -1.044131, y: 0.81878775}
+      - {x: -1.2179298, y: 0.9829842}
+      - {x: -1.3065999, y: 1.1385992}
+      - {x: -1.226273, y: 1.3614933}
+      - {x: -1.0386721, y: 1.6424745}
+      - {x: -1.2215446, y: 1.8288572}
+      - {x: -1.5045211, y: 1.6794572}
+      - {x: -1.7161486, y: 1.1732088}
+      - {x: -1.73254, y: 0.95578784}
+      - {x: -1.6792809, y: 0.8481793}
       - {x: -1.5077275, y: -0.032714367}
-      - {x: -1.6767994, y: -0.20731592}
-      - {x: -1.7301034, y: -0.36378646}
-      - {x: -1.7547678, y: -0.5775348}
-      - {x: -1.596848, y: -0.7224103}
-      - {x: -1.4179363, y: -0.8037584}
-      - {x: -1.2642138, y: -0.7110894}
-      - {x: -1.1423559, y: -0.70066273}
-      - {x: -1.1182643, y: -1.029083}
-      - {x: -0.8816285, y: -1.360004}
-      - {x: -0.74598265, y: -1.4729986}
-      - {x: -0.5598564, y: -1.4587117}
-      - {x: -0.2841878, y: -1.274628}
-      - {x: -0.14642501, y: -1.0009154}
-      - {x: 0.030307055, y: -1.0021734}
-      - {x: 0.0996027, y: -1.3024838}
-      - {x: 0.26318264, y: -1.5010463}
-      - {x: 0.7585442, y: -1.4669604}
-      - {x: 0.877985, y: -1.3169961}
-      - {x: 0.91618896, y: -1.2894073}
-      - {x: 1.1268218, y: -0.5472969}
-      - {x: 1.2726986, y: -0.6678945}
-      - {x: 1.5593898, y: -0.6735432}
-      - {x: 1.7388074, y: -0.564487}
-      - {x: 1.755903, y: -0.24029195}
-      - {x: 1.6613777, y: -0.03605318}
-      - {x: 1.3862193, y: 0.3192842}
-      - {x: 1.2739911, y: 0.7409867}
+      - {x: -1.6120305, y: 0.18907863}
+      - {x: -1.6757358, y: 0.7951411}
+      - {x: -1.6950655, y: 0.41385072}
+      - {x: -1.6074284, y: -0.0048600608}
+      - {x: -1.6156402, y: -0.20385076}
+      - {x: -1.6566006, y: -0.24287516}
+      - {x: -1.6255214, y: -0.35836276}
+      - {x: -1.5184942, y: -0.44342116}
+      - {x: -1.4423342, y: -0.5176332}
+      - {x: -1.3482791, y: -0.5392777}
+      - {x: -1.2949095, y: -0.61462694}
+      - {x: -1.1050639, y: -0.634935}
+      - {x: -0.9324453, y: -0.6016753}
+      - {x: -0.87807775, y: -0.64023125}
+      - {x: -0.8420786, y: -0.7083673}
+      - {x: -0.8169235, y: -0.8356851}
+      - {x: -0.7362944, y: -0.80779964}
+      - {x: -0.7121721, y: -0.82309896}
+      - {x: -0.8120548, y: -1.0197098}
+      - {x: -0.83728373, y: -1.1388017}
+      - {x: -0.7882275, y: -1.2128364}
+      - {x: -0.69122183, y: -1.2399937}
+      - {x: -0.57923675, y: -1.2011589}
+      - {x: -0.530111, y: -1.2115579}
+      - {x: -0.66917485, y: -1.603956}
+      - {x: -0.6088222, y: -1.7952843}
+      - {x: -0.53566825, y: -1.8605127}
+      - {x: -0.3941554, y: -1.8566244}
+      - {x: -0.32969823, y: -1.8149034}
+      - {x: -0.24765089, y: -1.702587}
+      - {x: -0.23336121, y: -1.5709791}
+      - {x: -0.15566137, y: -1.5165944}
+      - {x: -0.054951884, y: -1.4939513}
+      - {x: 0.040710762, y: -1.6930348}
+      - {x: 0.11381317, y: -1.7841144}
+      - {x: 0.21163271, y: -1.850275}
+      - {x: 0.32597417, y: -1.8450525}
+      - {x: 0.37741545, y: -1.792672}
+      - {x: 0.4316846, y: -1.8044074}
+      - {x: 0.5377495, y: -1.6826788}
+      - {x: 0.45787248, y: -1.3486793}
+      - {x: 0.3555554, y: -1.2178422}
+      - {x: 0.39435768, y: -1.162119}
+      - {x: 0.6616122, y: -1.2375318}
+      - {x: 0.74689806, y: -1.1615632}
+      - {x: 0.61108184, y: -0.81142366}
+      - {x: 0.63985974, y: -0.7113145}
+      - {x: 1.0616103, y: -0.63483655}
+      - {x: 1.2634038, y: -0.6853998}
+      - {x: 1.3731239, y: -0.6297734}
+      - {x: 1.5990896, y: -0.284354}
+      - {x: 1.659195, y: -0.18136965}
+      - {x: 1.662807, y: 0.0048217177}
+      - {x: 1.512365, y: 0.24407983}
+      - {x: 1.4327673, y: 0.5556474}
+      - {x: 1.4982316, y: 0.75066906}
+      - {x: 1.469847, y: 0.8961076}
   m_UseDelaunayMesh: 0
 --- !u!114 &238158029
 MonoBehaviour:
@@ -877,9 +923,130 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1ea16cfa7540d419bca730bea3f8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Geschwindigkeit: 50
-  SprungGeschwindigkeit: 30
-  jumpSpeed: 30
+  Geschwindigkeit: 8
+  SprungGeschwindigkeit: 50
+  maxSpeed: 150
+  dashingPower: 75
+  dashingTime: 0.2
+  dashingCooldown: 1
+  flipSteigerung: 10
+  Player: {fileID: 238158024}
+  groundCheck: {fileID: 1534258838}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  tr: {fileID: 238158030}
+--- !u!96 &238158030
+TrailRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238158022}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 0.5
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.2316684
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0.037174825, g: 0.990566, b: 0, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    textureScale: {x: 1, y: 1}
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_MinVertexDistance: 0.1
+  m_MaskInteraction: 0
+  m_Autodestruct: 0
+  m_Emitting: 0
+  m_ApplyActiveColorSpace: 1
 --- !u!1 &288860624
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +1059,7 @@ GameObject:
   - component: {fileID: 288860627}
   - component: {fileID: 288860626}
   - component: {fileID: 288860628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1182,7 @@ GameObject:
   - component: {fileID: 321655128}
   - component: {fileID: 321655130}
   - component: {fileID: 321655129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1247,9 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f32bdc6cd27ca4dbd3b2b45008c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 238158022}
-  offset: 5
-  offsetSmoothing: 6
+  Player: {fileID: 238158022}
 --- !u!1818360608 &519420034
 PositionConstraint:
   m_ObjectHideFlags: 0
@@ -1279,7 +1444,7 @@ GameObject:
   - component: {fileID: 597768391}
   - component: {fileID: 597768393}
   - component: {fileID: 597768392}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 649120928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SCHRAEGE Platformen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1534,7 +1699,7 @@ GameObject:
   - component: {fileID: 678828639}
   - component: {fileID: 678828641}
   - component: {fileID: 678828640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1730,7 +1895,7 @@ GameObject:
   - component: {fileID: 696047095}
   - component: {fileID: 696047097}
   - component: {fileID: 696047096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1966,7 +2131,7 @@ GameObject:
   - component: {fileID: 761511472}
   - component: {fileID: 761511470}
   - component: {fileID: 761511471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RoterBoden (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2090,7 +2255,7 @@ GameObject:
   - component: {fileID: 812970174}
   - component: {fileID: 812970173}
   - component: {fileID: 812970175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2214,7 +2379,7 @@ GameObject:
   - component: {fileID: 859148939}
   - component: {fileID: 859148938}
   - component: {fileID: 859148937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Gr\xFCnStein (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2337,7 +2502,7 @@ GameObject:
   - component: {fileID: 873123383}
   - component: {fileID: 873123385}
   - component: {fileID: 873123384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2448,7 +2613,7 @@ GameObject:
   - component: {fileID: 877656816}
   - component: {fileID: 877656818}
   - component: {fileID: 877656817}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2559,7 +2724,7 @@ GameObject:
   - component: {fileID: 991781138}
   - component: {fileID: 991781140}
   - component: {fileID: 991781139}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2795,7 +2960,7 @@ GameObject:
   - component: {fileID: 1068538370}
   - component: {fileID: 1068538369}
   - component: {fileID: 1068538368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2905,7 +3070,7 @@ GameObject:
   - component: {fileID: 1088108871}
   - component: {fileID: 1088108870}
   - component: {fileID: 1088108869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodenSchraeg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3014,7 +3179,7 @@ GameObject:
   - component: {fileID: 1146092368}
   - component: {fileID: 1146092370}
   - component: {fileID: 1146092369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3125,7 +3290,7 @@ GameObject:
   - component: {fileID: 1174591104}
   - component: {fileID: 1174591106}
   - component: {fileID: 1174591105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3237,7 +3402,7 @@ GameObject:
   - component: {fileID: 1193763661}
   - component: {fileID: 1193763660}
   - component: {fileID: 1193763663}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NEUTRAL Boden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3366,7 +3531,7 @@ GameObject:
   - component: {fileID: 1214063963}
   - component: {fileID: 1214063965}
   - component: {fileID: 1214063964}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3477,7 +3642,7 @@ GameObject:
   - component: {fileID: 1300043069}
   - component: {fileID: 1300043071}
   - component: {fileID: 1300043070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3588,7 +3753,7 @@ GameObject:
   - component: {fileID: 1329807652}
   - component: {fileID: 1329807654}
   - component: {fileID: 1329807653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3860,7 +4025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421351761}
   m_Layer: 0
-  m_Name: "GR\xDCNE Platformen"
+  m_Name: GRUENE Platformen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3900,7 +4065,7 @@ GameObject:
   - component: {fileID: 1445971076}
   - component: {fileID: 1445971075}
   - component: {fileID: 1445971077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4012,6 +4177,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1a95fcfc1081249a31b18b4e90b417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1534258837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1534258838}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1534258838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534258837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26, y: -1.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 238158026}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620408804
 GameObject:
   m_ObjectHideFlags: 0
@@ -4024,7 +4220,7 @@ GameObject:
   - component: {fileID: 1620408807}
   - component: {fileID: 1620408806}
   - component: {fileID: 1620408808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4148,7 +4344,7 @@ GameObject:
   - component: {fileID: 1626659387}
   - component: {fileID: 1626659386}
   - component: {fileID: 1626659385}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Gr\xFCnStein"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4338,7 +4534,7 @@ GameObject:
   - component: {fileID: 1733924667}
   - component: {fileID: 1733924669}
   - component: {fileID: 1733924668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4450,7 +4646,7 @@ GameObject:
   - component: {fileID: 1737477835}
   - component: {fileID: 1737477834}
   - component: {fileID: 1737477833}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodenSchraeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4559,7 +4755,7 @@ GameObject:
   - component: {fileID: 1743436228}
   - component: {fileID: 1743436230}
   - component: {fileID: 1743436229}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4670,7 +4866,7 @@ GameObject:
   - component: {fileID: 1879866542}
   - component: {fileID: 1879866544}
   - component: {fileID: 1879866543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5024,7 +5220,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009135246, y: -0.15081382}
+  m_Offset: {x: -0.0091433525, y: -0.15081382}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5035,7 +5231,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2721176, y: 2.3812542}
+  m_Size: {x: 19.154835, y: 2.3812542}
   m_EdgeRadius: 0
 --- !u!1 &2082752035
 GameObject:
@@ -5049,6 +5245,7 @@ GameObject:
   - component: {fileID: 2082752037}
   - component: {fileID: 2082752040}
   - component: {fileID: 2082752041}
+  - component: {fileID: 2082752042}
   m_Layer: 0
   m_Name: RoterBoden
   m_TagString: Untagged
@@ -5151,7 +5348,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1033531967, guid: 7e92631e65dfeb54897dfa9f44ab288d, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.1204893, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5161,6 +5358,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2082752042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082752035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b12ecb7421663149b8dcc3b259fbcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotRenderer: {fileID: 2082752041}
+  Wand: {fileID: 2082752035}
+  newColor: {r: 0.10484154, g: 0.8962264, b: 0.16248354, a: 1}
+  colors:
+  - {r: 0.1764706, g: 0.58431375, b: 0.13725491, a: 0}
+  - {r: 0.050980397, g: 0.054901965, b: 0.14117648, a: 1}
 --- !u!1 &2085907741
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,7 +5387,7 @@ GameObject:
   - component: {fileID: 2085907742}
   - component: {fileID: 2085907744}
   - component: {fileID: 2085907743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boden (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
