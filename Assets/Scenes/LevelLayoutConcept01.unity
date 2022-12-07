@@ -1849,7 +1849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238158022}
-  offset: 5
+  offset: 20
   offsetSmoothing: 2
 --- !u!1818360608 &519420034
 PositionConstraint:
@@ -5179,7 +5179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1a95fcfc1081249a31b18b4e90b417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GreenColliderSkill: {fileID: 0}
 --- !u!114 &7839467755918050285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5192,7 +5191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd2e1c158dc13040897114dd2c7f6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GREENSkill: {fileID: 0}
 --- !u!4 &7839467755918050286
 Transform:
   m_ObjectHideFlags: 0
