@@ -6,6 +6,7 @@ using UnityEngine;
 public class RED : MonoBehaviour
 {
     private BoxCollider2D REDSkill;
+    
 
 
     void Start()

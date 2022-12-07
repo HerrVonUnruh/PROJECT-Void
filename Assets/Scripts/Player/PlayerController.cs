@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
     public float flipSteigerung = 10f;
+    public float halfDashingPower = 1f;
+    
 
 
 
@@ -173,7 +175,26 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         float originalGravity = Player.gravityScale;
         Player.gravityScale = 0f;
-        Player.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        if (Input.GetKey("a") || Input.GetKey("d"))
+        {
+            Player.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        }
+        if (Input.GetKey("w")) 
+        {
+            Player.velocity = new Vector2(0f, transform.localScale.y + dashingPower);
+        }
+        if (Input.GetKey("a") && Input.GetKey("w") || Input.GetKey("d") && Input.GetKey("w"))
+        {
+            Player.velocity = new Vector2(transform.localScale.x * halfDashingPower, transform.localScale.y * halfDashingPower);
+        }
+        if (Input.GetKey("s"))
+        {
+            Player.velocity = new Vector2(0f, -transform.localScale.y * dashingPower);
+        }
+        if (Input.GetKey("a") && Input.GetKey("s") || Input.GetKey("d") && Input.GetKey("s"))
+        {
+            Player.velocity = new Vector2(transform.localScale.x * halfDashingPower, -transform.localScale.y * halfDashingPower);
+        }
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;

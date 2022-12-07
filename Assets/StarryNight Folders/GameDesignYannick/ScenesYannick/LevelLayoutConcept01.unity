@@ -608,6 +608,7 @@ MonoBehaviour:
   dashingTime: 0.2
   dashingCooldown: 1
   flipSteigerung: 15
+  halfDashingPower: 35
   Player: {fileID: 238158024}
   groundCheck: {fileID: 1534258838}
   groundLayer:
@@ -1847,7 +1848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f32bdc6cd27ca4dbd3b2b45008c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 238158022}
+  player: {fileID: 238158022}
+  offset: 5
+  offsetSmoothing: 2
 --- !u!1818360608 &519420034
 PositionConstraint:
   m_ObjectHideFlags: 0
