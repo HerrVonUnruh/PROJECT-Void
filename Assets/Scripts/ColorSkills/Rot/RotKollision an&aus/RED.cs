@@ -8,6 +8,7 @@ public class RED : MonoBehaviour
     private BoxCollider2D REDSkill;
     
 
+
     void Start()
     {
         REDSkill = GetComponent<BoxCollider2D>();

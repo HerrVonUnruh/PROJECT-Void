@@ -5,13 +5,13 @@ using UnityEngine;
 public class GreenCollider : MonoBehaviour
 {
     private BoxCollider2D GreenColliderSkill;
-    
+
 
 
     void Start()
     {
         GreenColliderSkill = GetComponent<BoxCollider2D>();
-       
+
 
     }
 
@@ -21,7 +21,12 @@ public class GreenCollider : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             GreenColliderSkill.enabled = !GreenColliderSkill.enabled;
-            
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            GreenColliderSkill.enabled = false;
         }
 
         if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
