@@ -341,6 +341,7 @@ MonoBehaviour:
   dashingTime: 0.2
   dashingCooldown: 1
   flipSteigerung: 15
+  halfDashingPower: 35
   Player: {fileID: 238158024}
   groundCheck: {fileID: 1534258838}
   groundLayer:
