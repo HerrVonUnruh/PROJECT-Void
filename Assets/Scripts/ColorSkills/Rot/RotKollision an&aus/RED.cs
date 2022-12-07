@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class RED : MonoBehaviour
 {
-    private BoxCollider2D REDSkill;
+    private PolygonCollider2D REDSkill;
+    private SpriteRenderer REDSkill2;
     
 
 
     void Start()
     {
-        REDSkill = GetComponent<BoxCollider2D>();
+        REDSkill = GetComponent<PolygonCollider2D>();
+        REDSkill2 = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -20,11 +22,14 @@ public class RED : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             REDSkill.enabled = !REDSkill.enabled;
+            REDSkill2.enabled = !REDSkill2.enabled;
+
         }
 
         if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             REDSkill.enabled = false;
+            REDSkill2.enabled = false;
         }
     }
 }
