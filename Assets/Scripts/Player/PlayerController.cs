@@ -67,8 +67,8 @@ public class PlayerController : MonoBehaviour
         }
 
 
-
-        dashingPower = 1f * Geschwindigkeit;
+        //Dash Power
+        //dashingPower = 70f;
 
         Direction = Input.GetAxis("Horizontal"); // schaltet den Unity Bezug der Tasteneingaben zu "Horizontal" Voreinstellung von Unity frei
         DirectionVertical = Input.GetAxis("Vertical");
@@ -97,26 +97,39 @@ public class PlayerController : MonoBehaviour
             Player.velocity = new Vector2(0, Player.velocity.y);
         }
 
-        if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+
+        //Rote Fähigkeit
+        if (Input.GetKeyUp(KeyCode.K) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             rend.sharedMaterial = material[1];
         }
-        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+
+        //Grüne Fähigkeit
+        if (Input.GetKeyUp(KeyCode.J) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             rend.sharedMaterial = material[0];
         }
-        if (Input.GetKeyUp(KeyCode.F))//|| Input.GetKeyDown(KeyCode.Joystick1Button1))
+
+
+        //Blaue Fähigkeit
+        if (Input.GetKeyUp(KeyCode.H) || Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
             rend.sharedMaterial = material[2];
         }
 
+        //Gelbe Fähigkeit
+        if (Input.GetKeyUp(KeyCode.U) || Input.GetKeyDown(KeyCode.Joystick1Button3))
+            {
+            rend.sharedMaterial = material[3];
+            }
 
-        
+
+
 
 
         //HIER FUER YANNICK!!!!!
         //_______________________________________________
-        if (Direction == 0)
+            if (Direction == 0)
         { Geschwindigkeit = 8f; }
 
 
@@ -178,7 +191,7 @@ public class PlayerController : MonoBehaviour
     private void Spawn()
     { //SPAWN
         //______________________________________________________       
-        if (Input.GetKeyUp(KeyCode.N))
+        if (Input.GetKeyUp(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button6))
         {
             transform.CompareTag("Player");
             transform.position = spawnPoint.position;

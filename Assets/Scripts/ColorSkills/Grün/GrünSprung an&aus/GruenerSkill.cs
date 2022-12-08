@@ -25,14 +25,14 @@ public class GruenerSkill : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+        if (Input.GetKeyUp(KeyCode.J) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
-            GreenColliderSkill.enabled = !GreenColliderSkill.enabled;
-            GreenSkill.enabled = !GreenSkill.enabled;
+            GreenColliderSkill.enabled = true;
+            GreenSkill.enabled = true;
 
         }
 
-        if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+        if (Input.GetKeyUp(KeyCode.U) || Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyUp(KeyCode.K) || Input.GetKeyDown(KeyCode.Joystick1Button1) || (Input.GetKeyUp(KeyCode.H) || Input.GetKeyDown(KeyCode.Joystick1Button2)) )
         {
             GreenColliderSkill.enabled = false;
             GreenSkill.enabled = false;

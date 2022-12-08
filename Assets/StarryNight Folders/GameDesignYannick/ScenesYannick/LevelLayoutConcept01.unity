@@ -608,6 +608,7 @@ MonoBehaviour:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2100000, guid: 755af28e7a3c4c742a21bc4e774cdf8c, type: 2}
   - {fileID: 2100000, guid: afeee59eaf96f62458249a6f9f8bab99, type: 2}
+  - {fileID: -876546973899608171, guid: 8e5816c14b7c26e4394a9a0551833288, type: 3}
   spawnPoint: {fileID: 389885552}
   Player: {fileID: 238158024}
   groundCheck: {fileID: 1534258838}
@@ -1687,7 +1688,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1731,7 +1732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238158022}
-  offset: 5
+  offset_x: 0
+  offset_y: 0
   offsetSmoothing: 2
 --- !u!1818360608 &519420034
 PositionConstraint:
@@ -2404,7 +2406,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081811159}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
