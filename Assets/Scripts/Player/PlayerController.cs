@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
     public float dashingCooldown = 1f;
     public float flipSteigerung = 10f;
     public float halfDashingPower = 1f;
-    
+    public Material[] material;
+    Renderer rend;
+    [SerializeField] Transform spawnPoint;
 
 
 
@@ -37,6 +39,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Player = GetComponent<Rigidbody2D>(); // Erstellt am Anfang des Games einen Bezug zum Rigidbody namens "Player"
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+        rend.sharedMaterial = material[0];
 
     }
 
@@ -69,6 +74,8 @@ public class PlayerController : MonoBehaviour
         DirectionVertical = Input.GetAxis("Vertical");
 
         Flip(); // HIER IST DIE STEIGERUNG FUER DIE GESCHWINDIGKEIT PRO SEKUNDE!!!!!!
+        Spawn();
+
 
 
         if (Geschwindigkeit < maxSpeed)
@@ -90,11 +97,26 @@ public class PlayerController : MonoBehaviour
             Player.velocity = new Vector2(0, Player.velocity.y);
         }
 
+        if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            rend.sharedMaterial = material[1];
+        }
+        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+        {
+            rend.sharedMaterial = material[0];
+        }
+        if (Input.GetKeyUp(KeyCode.F))//|| Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            rend.sharedMaterial = material[2];
+        }
+
+
+        
 
 
         //HIER FUER YANNICK!!!!!
         //_______________________________________________
-        if(Direction == 0)
+        if (Direction == 0)
         { Geschwindigkeit = 8f; }
 
 
@@ -150,7 +172,18 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        Player.velocity = new Vector2(Direction * Geschwindigkeit, Player.velocity.y);
+        Player.velocity = new Vector2(Direction * dashingPower, Player.velocity.y);
+    }
+
+    private void Spawn()
+    { //SPAWN
+        //______________________________________________________       
+        if (Input.GetKeyUp(KeyCode.N))
+        {
+            transform.CompareTag("Player");
+            transform.position = spawnPoint.position;
+            return;
+        }
     }
 
     private bool IsGrounded()
@@ -177,11 +210,11 @@ public class PlayerController : MonoBehaviour
         Player.gravityScale = 0f;
         if (Input.GetKey("a") || Input.GetKey("d"))
         {
-            Player.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+            Player.velocity = new Vector2(transform.localScale.x * dashingPower, 5f);
         }
         if (Input.GetKey("w")) 
         {
-            Player.velocity = new Vector2(0f, transform.localScale.y + dashingPower);
+            Player.velocity = new Vector2(0f, transform.localScale.y * dashingPower);
         }
         if (Input.GetKey("a") && Input.GetKey("w") || Input.GetKey("d") && Input.GetKey("w"))
         {
