@@ -13,5 +13,6 @@ public class KillPlayer : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
             collision.transform.position = spawnPoint.position;
     }
+    
 
 }
