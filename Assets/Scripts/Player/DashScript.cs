@@ -41,9 +41,9 @@ public class DashScript : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.LeftShift) && canDash || Input.GetKeyDown(KeyCode.Joystick1Button5) && canDash)
         //{
         //    DashControll.enabled = false;
-           
+
         //}
-        
+
 
         //rb.velocity = new Vector2(Direction * Geschwindigkeit.Geschwindigkeit * 2, rb.velocity.y);
 
@@ -74,7 +74,7 @@ public class DashScript : MonoBehaviour
     }
     private IEnumerator Dash()
     {
-        
+
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
@@ -139,6 +139,42 @@ public class DashScript : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
+    private IEnumerator DashVerticalLinksHoch()
+    {
+
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * -dashingPower, transform.localScale.y * dashingPower);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
+
+    private IEnumerator DashVerticalLinksRunter()
+    {
+
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(-transform.localScale.x * -dashingPower, transform.localScale.y * -dashingPower);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
+
+
     private void Flip()
     {
         if (isFacingRight && Direction < 0f || !isFacingRight && Direction > 0f)
@@ -159,6 +195,8 @@ public class DashScript : MonoBehaviour
         Direction = Input.GetAxisRaw("Horizontal");
         DirectionVertical = Input.GetAxisRaw("Vertical");
 
+        Flip();
+
         //if (Input.GetButtonDown("Jump") && IsGrounded())
         //{
         //    rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
@@ -169,13 +207,14 @@ public class DashScript : MonoBehaviour
         //    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         //}
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && Direction > 0f && DirectionVertical == 0f ||  Input.GetKeyDown(KeyCode.Joystick1Button5) && canDash && Direction > 0f && DirectionVertical == 0f || Input.GetKeyDown(KeyCode.LeftShift) && canDash && Direction < 0f && DirectionVertical == 0f || Input.GetKeyDown(KeyCode.Joystick1Button5) && canDash && Direction < 0f && DirectionVertical == 0f)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && Direction > 0f && DirectionVertical == 0f || Input.GetKeyDown(KeyCode.Joystick1Button5) && canDash && Direction > 0f && DirectionVertical == 0f || Input.GetKeyDown(KeyCode.LeftShift) && canDash && Direction < 0f && DirectionVertical == 0f || Input.GetKeyDown(KeyCode.Joystick1Button5) && canDash && Direction < 0f && DirectionVertical == 0f)
         {
-           
-            DashControll.Geschwindigkeit = 200f;
+
             StartCoroutine(Dash());
         }
-       
+
+
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && DirectionVertical > 0f && Direction == 0f || Input.GetKey(KeyCode.Joystick1Button5) && canDash && DirectionVertical > 0f && Direction == 0f /*|| Input.GetKeyDown(KeyCode.LeftShift) && canDash && DirectionVertical < 0f && Direction == 0f || Input.GetKey(KeyCode.Joystick1Button5) && canDash && DirectionVertical < 0f && Direction == 0f*/)
         {
             StartCoroutine(DashVertical());
@@ -191,12 +230,16 @@ public class DashScript : MonoBehaviour
             StartCoroutine(DashVerticalRechtsRunter());
         }
 
-        Flip();
-
-       
-            
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && DirectionVertical > 0f && Direction < 0f || Input.GetKey(KeyCode.Joystick1Button5) && canDash && DirectionVertical > 0f && Direction < 0f)
+        {
+            StartCoroutine(DashVerticalLinksHoch());
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && DirectionVertical < 0f && Direction < 0f|| Input.GetKey(KeyCode.Joystick1Button5) && canDash && DirectionVertical < 0f && Direction < 0f)
+        {
+            StartCoroutine(DashVerticalLinksRunter());
+        }
     }
-    }
+}
 
     
 

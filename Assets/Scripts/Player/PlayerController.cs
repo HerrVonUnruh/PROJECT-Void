@@ -102,15 +102,15 @@ public class PlayerController : MonoBehaviour
 
 
 
-        //if (DirectionVertical == 0f && Input.GetKeyDown(KeyCode.S) || DirectionVertical < 0f && Input.GetKey(KeyCode.Joystick1Button4))
-        //{
-        //    Player.gravityScale = 5f + Player.gravityScale + 1f * Time.deltaTime;
+        if (DirectionVertical == 0f && Input.GetKeyDown(KeyCode.S) || DirectionVertical < 0f && Input.GetKey(KeyCode.Joystick1Button4))
+        {
+            Player.gravityScale = 5f + Player.gravityScale + 1f * Time.deltaTime;
 
-        //}
-        //if (Input.GetKeyUp(KeyCode.Joystick1Button4))
-        //{
-        //    Player.gravityScale = 5f;
-        //}
+        }
+        if (Input.GetKeyUp(KeyCode.Joystick1Button4))
+        {
+            Player.gravityScale = 7f;
+        }
 
 
 
