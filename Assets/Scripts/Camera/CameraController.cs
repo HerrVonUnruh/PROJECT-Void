@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] public Camera CameraZoom;
     public PlayerController KameraZoom;
-
+    public float VariableKameraZoom = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,17 +44,17 @@ public class CameraController : MonoBehaviour
             playerPosition = new Vector3(playerPosition.x - offset_x, playerPosition.y - offset_y, playerPosition.z);
         }
 
-        CameraZoom.orthographicSize = 8f;
+        CameraZoom.orthographicSize = 10f;
        
         
 
         if(KameraZoom.Geschwindigkeit > 20f)
         {
             
-            CameraZoom.orthographicSize = KameraZoom.Geschwindigkeit * 0.3f;
-            if (CameraZoom.orthographicSize < 8f)
+            CameraZoom.orthographicSize = KameraZoom.Geschwindigkeit * VariableKameraZoom;
+            if (CameraZoom.orthographicSize < 10f)
             {
-                CameraZoom.orthographicSize = 8f;
+                CameraZoom.orthographicSize = 10f;
             }
         }
         

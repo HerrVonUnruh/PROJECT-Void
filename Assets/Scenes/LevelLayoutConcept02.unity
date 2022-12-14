@@ -1911,7 +1911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Geschwindigkeit: 20
   GeschwindigkeitsAbfall: 20
-  StandartGeschwindigkeit: 20
+  StandartGeschwindigkeit: 50
   maxSpeed: 120
   flipSteigerung: 5
   Direction: 0
@@ -3809,6 +3809,7 @@ MonoBehaviour:
   offsetSmoothing: 5
   CameraZoom: {fileID: 519420031}
   KameraZoom: {fileID: 238158032}
+  VariableKameraZoom: 0.3
 --- !u!1818360608 &519420034
 PositionConstraint:
   m_ObjectHideFlags: 0
