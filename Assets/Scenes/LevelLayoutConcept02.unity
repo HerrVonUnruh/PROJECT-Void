@@ -1451,10 +1451,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 238158026}
-  - component: {fileID: 238158025}
   - component: {fileID: 238158033}
-  - component: {fileID: 238158032}
   - component: {fileID: 238158024}
+  - component: {fileID: 238158032}
+  - component: {fileID: 238158025}
   - component: {fileID: 238158030}
   - component: {fileID: 238158031}
   m_Layer: 8
