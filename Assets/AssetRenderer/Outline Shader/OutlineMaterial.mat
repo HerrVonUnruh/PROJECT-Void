@@ -58,5 +58,5 @@ Material:
     - CORNERS: 1
     - _OutlineThickness: 1
     m_Colors:
-    - _OutlineColor: {r: 0.102806866, g: 1, b: 0.08018869, a: 1}
+    - _OutlineColor: {r: 0.07843137, g: 1, b: 0.16912217, a: 1}
   m_BuildTextureStacks: []
