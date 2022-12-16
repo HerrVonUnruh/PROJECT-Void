@@ -44,7 +44,7 @@ public class CameraController : MonoBehaviour
             playerPosition = new Vector3(playerPosition.x - offset_x, playerPosition.y - offset_y, playerPosition.z);
         }
 
-        CameraZoom.orthographicSize = 8f;
+        CameraZoom.orthographicSize = 10f;
        
         
 
@@ -52,9 +52,9 @@ public class CameraController : MonoBehaviour
         {
             
             CameraZoom.orthographicSize = KameraZoom.Geschwindigkeit * 0.3f;
-            if (CameraZoom.orthographicSize < 8f)
+            if (CameraZoom.orthographicSize < 10f)
             {
-                CameraZoom.orthographicSize = 8f;
+                CameraZoom.orthographicSize = 10f;
             }
         }
         

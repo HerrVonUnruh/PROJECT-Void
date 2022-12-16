@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
     //public float dashingTime = 0.2f;
     //public float dashingCooldown = 1f;
 
-
+    public KillPlayer killSpawn;
+    public float waitAtSpawn = 2f;
 
     public Material[] material;
     Renderer rend;
@@ -267,7 +268,7 @@ public class PlayerController : MonoBehaviour
     //    }
     //}
 
-    private void Spawn()
+    public void Spawn()
     { //SPAWN mit eigener Tastenbelegung
         //______________________________________________________       
         if (Input.GetKeyUp(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button6))
@@ -277,17 +278,23 @@ public class PlayerController : MonoBehaviour
             // return;
         }
 
+        if (killSpawn.willSpawn)
+        {
+            StartCoroutine(SpawnPause());
+        }
+
     }
 
-    private IEnumerator SpawnPause()
+    public IEnumerator SpawnPause()
     {
         Debug.Log("Start");
         transform.CompareTag("Player");
         transform.position = spawnPoint.position;
         onSpawn = true;
-       
-        yield return new WaitForSeconds(2);
+        Player.velocity = Vector2.zero;
+        yield return new WaitForSeconds(waitAtSpawn);
         onSpawn = false;
+        killSpawn.willSpawn = false;
         Debug.Log("Ende");
 
     }
