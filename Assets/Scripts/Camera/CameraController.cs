@@ -10,10 +10,16 @@ public class CameraController : MonoBehaviour
     public float offsetSmoothing;
     private Vector3 playerPosition;
 
+    [SerializeField] public Camera CameraZoom;
+    public PlayerController KameraZoom;
+    public float VariableKameraZoom = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
 
+       
+        CameraZoom = GetComponent<Camera>();
+        Debug.Log(KameraZoom.Geschwindigkeit.ToString("F4"));
     }
 
     // Update is called once per frame
@@ -38,8 +44,22 @@ public class CameraController : MonoBehaviour
             playerPosition = new Vector3(playerPosition.x - offset_x, playerPosition.y - offset_y, playerPosition.z);
         }
 
+        CameraZoom.orthographicSize = 10f;
+       
+        
 
-
+        if(KameraZoom.Geschwindigkeit > 20f)
+        {
+            
+            CameraZoom.orthographicSize = KameraZoom.Geschwindigkeit * VariableKameraZoom;
+            if (CameraZoom.orthographicSize < 10f)
+            {
+                CameraZoom.orthographicSize = 10f;
+            }
+        }
+        
+        
+        
 
 
     transform.position = Vector3.Lerp(transform.position, playerPosition, offsetSmoothing * Time.deltaTime);

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3d705b7f5386e7428ff0e2143bb9a63
+guid: 20e98190b630d1842aa9c1bb20974f4a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,28 +105,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: BigFungusTree2_0
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 23
-        width: 500
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef7717a3c27a3b64fb53e72cf2f91f4f
-      internalID: -1036437898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -137,8 +116,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      BigFungusTree2_0: -1036437898
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
