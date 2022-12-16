@@ -5576,6 +5576,8 @@ MonoBehaviour:
   flipSteigerung: 10
   Direction: 0
   DirectionVertical: 0
+  killSpawn: {fileID: 2090992711}
+  waitAtSpawn: 2
   material:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: -876546973899608171, guid: 2a25a1ad266a9644eb9f21c6931b697e, type: 3}
@@ -49205,6 +49207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 389885552}
+  spawning: {fileID: 238158032}
+  willSpawn: 0
 --- !u!61 &2090992712
 BoxCollider2D:
   m_ObjectHideFlags: 0
