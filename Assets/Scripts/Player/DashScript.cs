@@ -79,7 +79,9 @@ public class DashScript : MonoBehaviour
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        //rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        rb.AddForce(new Vector3(transform.localScale.x * dashingPower, 0, 5f), ForceMode2D.Impulse);
+        //rb.AddForce(transform.right * dashingPower, ForceMode2D.Impulse);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
@@ -209,7 +211,7 @@ public class DashScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && Direction > 0f && DirectionVertical == 0f || Input.GetKeyDown(KeyCode.Joystick1Button5) && canDash && Direction > 0f && DirectionVertical == 0f || Input.GetKeyDown(KeyCode.LeftShift) && canDash && Direction < 0f && DirectionVertical == 0f || Input.GetKeyDown(KeyCode.Joystick1Button5) && canDash && Direction < 0f && DirectionVertical == 0f)
         {
-
+            DashControll.Geschwindigkeit = DashControll.StandartGeschwindigkeit;
             StartCoroutine(Dash());
         }
 
