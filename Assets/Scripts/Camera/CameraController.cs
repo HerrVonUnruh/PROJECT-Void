@@ -51,10 +51,10 @@ public class CameraController : MonoBehaviour
         if(KameraZoom.Geschwindigkeit > 20f)
         {
             
-            CameraZoom.orthographicSize = KameraZoom.Geschwindigkeit * 0.3f;
-            if (CameraZoom.orthographicSize < 10f)
+            CameraZoom.orthographicSize = KameraZoom.Geschwindigkeit * VariableKameraZoom;
+            if (CameraZoom.orthographicSize < 15f)
             {
-                CameraZoom.orthographicSize = 10f;
+                CameraZoom.orthographicSize = 15f;
             }
         }
         
