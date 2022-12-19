@@ -35,6 +35,7 @@ public class DashScript : MonoBehaviour
     {
         if (isDashing)
         {
+            DashControll.Geschwindigkeit = 60f;
             return;
         }
 
@@ -80,7 +81,7 @@ public class DashScript : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         //rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-        rb.AddForce(new Vector3(transform.localScale.x * dashingPower, 0, 5f), ForceMode2D.Impulse);
+        rb.AddForce(new Vector3(transform.localScale.x * dashingPower, 0f, 0f), ForceMode2D.Impulse);
         //rb.AddForce(transform.right * dashingPower, ForceMode2D.Impulse);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
@@ -98,7 +99,7 @@ public class DashScript : MonoBehaviour
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.velocity = new Vector2(0f, transform.localScale.y * dashingPower);
+        rb.velocity = new Vector2(0f, transform.localScale.y * DashControll.Geschwindigkeit * 5f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
@@ -115,7 +116,7 @@ public class DashScript : MonoBehaviour
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, transform.localScale.y * dashingPower);
+        rb.velocity = new Vector2(transform.localScale.x * DashControll.Geschwindigkeit, transform.localScale.y * DashControll.Geschwindigkeit);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
@@ -132,7 +133,7 @@ public class DashScript : MonoBehaviour
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, transform.localScale.y * -dashingPower);
+        rb.velocity = new Vector2(transform.localScale.x * DashControll.Geschwindigkeit, transform.localScale.y * -DashControll.Geschwindigkeit);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
@@ -149,7 +150,7 @@ public class DashScript : MonoBehaviour
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * -dashingPower, transform.localScale.y * dashingPower);
+        rb.velocity = new Vector2(transform.localScale.x * -DashControll.Geschwindigkeit, transform.localScale.y * DashControll.Geschwindigkeit);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
@@ -166,7 +167,7 @@ public class DashScript : MonoBehaviour
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.velocity = new Vector2(-transform.localScale.x * -dashingPower, transform.localScale.y * -dashingPower);
+        rb.velocity = new Vector2(-transform.localScale.x * -DashControll.Geschwindigkeit, transform.localScale.y * -DashControll.Geschwindigkeit);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
