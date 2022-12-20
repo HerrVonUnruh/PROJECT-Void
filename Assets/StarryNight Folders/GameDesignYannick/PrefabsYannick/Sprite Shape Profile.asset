@@ -17,12 +17,19 @@ MonoBehaviour:
     m_End: 180
     m_Order: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 64b2eae0d8c4daa44a3ff31f93d67a89, type: 3}
-    - {fileID: -909146276, guid: e2777a27793ed89488ee0ddb13bacb15, type: 3}
-    - {fileID: 381205356, guid: e2777a27793ed89488ee0ddb13bacb15, type: 3}
-    - {fileID: 1189010903, guid: e2777a27793ed89488ee0ddb13bacb15, type: 3}
-    - {fileID: -303119740, guid: e2777a27793ed89488ee0ddb13bacb15, type: 3}
-    - {fileID: -303119740, guid: e2777a27793ed89488ee0ddb13bacb15, type: 3}
+    - {fileID: 21300000, guid: a289dafa1918446418f6203c0dcc5d47, type: 3}
+    - {fileID: 21300000, guid: d241e8fea59a87b47bf7fdf2ed5e4cd9, type: 3}
+    - {fileID: 21300000, guid: 15dc33d2fbaec7447b3e6eadd6864410, type: 3}
+    - {fileID: 21300000, guid: 973640c386aef994da89b976d322d0e0, type: 3}
+    - {fileID: 21300000, guid: 4a8bb26874d29db428430682ff89ec61, type: 3}
+    - {fileID: 21300000, guid: b7ce180f600ca1845876077e07816052, type: 3}
+    - {fileID: 21300000, guid: 18a7d33aba0caca42924b92ff2b7a927, type: 3}
+    - {fileID: 21300000, guid: d0520399de933074886cdd44a9ad505d, type: 3}
+    - {fileID: 21300000, guid: 1b0c4944585675245b536a9005fe2925, type: 3}
+    - {fileID: 21300000, guid: 16147e1cd8d43c04aa4dc6e99744040d, type: 3}
+    - {fileID: 21300000, guid: 55656f67fd632b648aa166a656c732b0, type: 3}
+    - {fileID: 21300000, guid: ffd4cf4ad6179de4aaa6b6b075acd3ec, type: 3}
+    - {fileID: 21300000, guid: ed2059f788f7bd14dae1b2b6e803c931, type: 3}
   m_FillTexture: {fileID: 0}
   m_CornerSprites:
   - m_CornerType: 0

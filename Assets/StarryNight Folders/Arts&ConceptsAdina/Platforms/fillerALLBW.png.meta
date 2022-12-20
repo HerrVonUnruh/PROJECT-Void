@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fillerALLBW_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 807
+        width: 253
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471dc319366544243913bfeaa2807609
+      internalID: 999621634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_1
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 640
+        width: 162
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8078939b91e1a244b438654ef7fdc53
+      internalID: 1231525443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_2
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 726
+        width: 206
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb68c02dadc084b4b883d3c1454e8a15
+      internalID: -2122911537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_3
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 739
+        width: 227
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cddf15b6a3203c4ea94fb2384f02bcd
+      internalID: 1928218317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_4
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 629
+        width: 544
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c720a6d58fec2b74a8688cf89dd1a44e
+      internalID: 1553046287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 429
+        width: 197
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729f83fc7b3b45d44aa41891840ae857
+      internalID: -26501936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_6
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 419
+        width: 224
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96dd6f210aa81a4b975cf91596ef9dd
+      internalID: -644858708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_7
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 523
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7b2308570ec4449a5cf69883d92f9f
+      internalID: 234134017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_8
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 468
+        width: 379
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f2a61e65abdaa42bb1896e00117691
+      internalID: 163190404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_9
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 74
+        width: 867
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac5ee55c49b58a439566b5d5398329c
+      internalID: 936803064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_10
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 72
+        width: 278
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46205e63900d378488ba361aa99cebc5
+      internalID: -410250073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fillerALLBW_11
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 114
+        width: 510
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f4284294f981641a83f5fc40716516
+      internalID: 40718035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +368,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fillerALLBW_0: 999621634
+      fillerALLBW_7: 234134017
+      fillerALLBW_4: 1553046287
+      fillerALLBW_1: 1231525443
+      fillerALLBW_8: 163190404
+      fillerALLBW_10: -410250073
+      fillerALLBW_11: 40718035
+      fillerALLBW_9: 936803064
+      fillerALLBW_6: -644858708
+      fillerALLBW_2: -2122911537
+      fillerALLBW_3: 1928218317
+      fillerALLBW_5: -26501936
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

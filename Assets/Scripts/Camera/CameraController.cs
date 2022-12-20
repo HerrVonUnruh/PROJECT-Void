@@ -44,7 +44,7 @@ public class CameraController : MonoBehaviour
             playerPosition = new Vector3(playerPosition.x - offset_x, playerPosition.y - offset_y, playerPosition.z);
         }
 
-        CameraZoom.orthographicSize = 10f;
+        CameraZoom.orthographicSize = 15f;
        
         
 
