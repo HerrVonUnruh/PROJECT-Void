@@ -412,18 +412,18 @@ MonoBehaviour:
       m_ExpandedIDs: 0244d9ff6869daff2221dbff2421dbff2621dbff849ddbff8a9ddbff909ddbff969ddbffa49ddbffa69ddbffa89ddbffac9ddbffae9ddbffb09ddbffc639ddffe639ddffbc72deff9c8adeff1ab1defff2b3deffead9dfff9c69e0ff8e74e0ff083deaff1821ecff9aedecff8a96edffde2ff0ffb835f0ff541ff1ff2894f1ff5a45f6ff7e45f6ff8245f6ff8a45f6ff8e45f6ff9245f6ffa245f6ffa445f6ffa645f6ffae45f6ffb445f6ff368cf8ff6c13feff24ccfffffafaffffd06f000040720000be7300000674000034740000b474000038750000e27600004eff0000100001001001010054020100080301009c030100a6040100c4040100d0040100140601006c06010002070100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: MainMenu
+        m_OriginalName: MainMenu
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 71246
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
